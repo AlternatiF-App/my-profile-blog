@@ -1,4 +1,4 @@
-import ItemContent from '../MainContent/ItemContent'
+import ItemContent from '../ItemLandingPage/ItemContent'
 
 const MainContent = () => {
   return (
@@ -20,10 +20,12 @@ const MainContent = () => {
                         </button>
                     </div>
                 </div>
-                <div className="hidden lg:flex w-1/2 py-20 justify-center">
-                    <img className="w-3/6"
-                        src="/assets/images/cv.jpg"
-                    />
+                <div className="hidden lg:block py-36 w-1/2">
+                    <div>
+                        <img className="w-full h-auto"
+                            src="/assets/images/illustration.png"
+                        />
+                    </div>
                 </div>
             </div>
         </div>
