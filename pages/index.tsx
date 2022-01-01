@@ -1,3 +1,4 @@
+import Footer from '../components/Footer/Footer'
 import Header from '../components/Header/Header'
 import Profile from '../components/ItemLandingPage/Profile'
 import FeaturedContent from '../components/LandingPage/FeaturedContent'
@@ -12,6 +13,7 @@ const Home = () => {
         </div>
         <FeaturedContent/>
         <Profile/>
+        <Footer/>
     </>
   )
 }
