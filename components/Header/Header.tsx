@@ -6,7 +6,7 @@ const Header = () => {
   const active:string = 'border-r-4 border-primary'
 
   return (
-        <div className="font-oxygen text-sm lg:text-base lg:pt-4 2xl:pt-8">
+        <div className="font-oxygen text-sm lg:text-base lg:py-4 2xl:py-8 bg-secondary">
             <div className="w-full 2xl:w-10/12 2xl:mx-auto px-4 py-4 lg:px-6 2xl:px-8">
                 <div className="flex items-center justify-between space-x-8">
                     <div className="lg:flex lg:items-center lg:space-x-4">

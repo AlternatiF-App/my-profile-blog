@@ -1,13 +1,14 @@
 import { ShareIcon, InformationCircleIcon } from '@heroicons/react/outline'
+import Link from 'next/link'
 
 const ItemFeaturedContent = () => {
   return (
         <div className="font-oxygen shadow-md bg-white w-80">
-            {/* <div> */}
-                <img className="w-full h-auto object-cover"
+            <Link href="/detail/detail-portofolio">
+                <img className="w-full h-auto object-cover cursor-pointer"
                     src="/assets/images/featured.jfif"
                 />
-            {/* </div> */}
+            </Link>
             <div className="px-4 lg:px-6 py-4 w-72 2xl:w-full">
                 <div className="flex items-center justify-between">
                     <h2 className="text-base lg:text-xl font-medium">
