@@ -11,3 +11,66 @@
 .hide-scroll-bar::-webkit-scrollbar {
     display: none;
 }
+
+/* content */
+.content {
+    width: 100%;
+    clear: both;
+}
+
+.content img {
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.content h4 {
+    font-size: 30px;
+    font-weight: 700;
+    padding: 20px 0;
+}
+
+.content a {
+    color: #FF6701;
+}
+
+.content p {
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.content ol {
+    display: block;
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.content ol li {
+    padding: 8px 0;
+}
+
+.content ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.content ul li {
+    margin-bottom: -1px;
+    padding: 8px 0;
+    display: inline-flex;
+}
+
+.content ul li a {
+    padding: 0 1rem;
+    font-weight: 600;
+}

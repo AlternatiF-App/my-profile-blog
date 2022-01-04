@@ -1,5 +1,6 @@
 import { MenuIcon } from '@heroicons/react/outline'
 import { useState } from 'react'
+import Link from 'next/link'
 
 const Header = () => {
   const [menu, setMenu] = useState(false)
@@ -9,13 +10,15 @@ const Header = () => {
         <div className="font-oxygen text-sm lg:text-base lg:py-4 2xl:py-8 bg-secondary">
             <div className="w-full 2xl:w-10/12 2xl:mx-auto px-4 py-4 lg:px-6 2xl:px-8">
                 <div className="flex items-center justify-between space-x-8">
-                    <div className="lg:flex lg:items-center lg:space-x-4">
-                        <img src="/assets/images/ava.jpg" alt="avatar" className="hidden lg:block rounded-full object-cover w-10 h-10" />
-                        <h1 className="text-xl lg:text-2xl 2xl:text-4xl font-bold text-primary">FANANI</h1>
-                    </div>
+                    <Link href="/">
+                        <div className="cursor-pointer lg:flex lg:items-center lg:space-x-4">
+                            <img src="/assets/images/ava.jpg" alt="avatar" className="hidden lg:block rounded-full object-cover w-10 h-10" />
+                            <h1 className="text-xl lg:text-2xl 2xl:text-4xl font-bold text-primary">FANANI</h1>
+                        </div>
+                    </Link>
                     <ul className="text-xl 2xl:text-2xl flex items-center font-bold text-gray-400 space-x-10">
                         <li className="hidden lg:block hover:text-primary transition-all duration-300 ease-in-out cursor-pointer">CV</li>
-                        <li className="hidden lg:block hover:text-primary transition-all duration-300 ease-in-out cursor-pointer">Blog</li>
+                        <Link href="/blog-list"><li className="hidden lg:block hover:text-primary transition-all duration-300 ease-in-out cursor-pointer">Blog</li></Link>
                         <li className="hidden lg:block hover:text-primary transition-all duration-300 ease-in-out cursor-pointer">About Me</li>
                         <li>
                             <MenuIcon
