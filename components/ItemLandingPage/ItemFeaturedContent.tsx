@@ -1,21 +1,31 @@
 import { ShareIcon, InformationCircleIcon } from '@heroicons/react/outline'
 import Link from 'next/link'
 
-const ItemFeaturedContent = () => {
+interface ItemFeaturedContentProps{
+    thumbnail: string;
+    title: string;
+    categories: [];
+}
+
+const ItemFeaturedContent = ({ thumbnail, title, categories }:ItemFeaturedContentProps) => {
   return (
         <div className="font-oxygen shadow-md bg-white w-80">
-            <Link href="/detail/detail-portofolio">
-                <img className="w-full h-auto object-cover cursor-pointer"
-                    src="/assets/images/featured.jfif"
-                />
-            </Link>
+            <img className="w-full h-48 object-cover cursor-pointer"
+                src={thumbnail}
+            />
             <div className="px-4 lg:px-6 py-4 w-72 2xl:w-full">
-                <div className="flex items-center justify-between">
-                    <h2 className="text-base lg:text-xl font-medium">
-                        Job Trailers
+                <div className="flex space-x-4 items-center justify-between">
+                    <h2 className="text-base lg:text-xl font-medium hover:underline cursor-pointer">
+                        <Link href={`/detail/${title}`}>
+                            {title.substring(0, 20)}
+                        </Link>
                     </h2>
                     <span className="block py-1 px-4 text-sm font-medium rounded-full bg-primary text-secondary">
-                        Web Design
+                        {
+                            categories.slice(0, 1).map((item:any) => {
+                              return item
+                            })
+                        }
                     </span>
                 </div>
                 <p className="text-sm font-light pt-4 leading-none">

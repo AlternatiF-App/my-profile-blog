@@ -7,12 +7,11 @@ const Header = () => {
   const active:string = 'border-r-4 border-primary'
 
   return (
-        <div className="font-oxygen text-sm lg:text-base lg:py-4 2xl:py-8 bg-secondary">
-            <div className="w-full 2xl:w-10/12 2xl:mx-auto px-4 py-4 lg:px-6 2xl:px-8">
+        <div className="font-oxygen text-sm lg:text-base lg:py-4 bg-secondary">
+            <div className="w-full 2xl:w-10/12 2xl:mx-auto px-4 lg:px-6 2xl:px-8">
                 <div className="flex items-center justify-between space-x-8">
                     <Link href="/">
                         <div className="cursor-pointer lg:flex lg:items-center lg:space-x-4">
-                            <img src="/assets/images/ava.jpg" alt="avatar" className="hidden lg:block rounded-full object-cover w-10 h-10" />
                             <h1 className="text-xl lg:text-2xl 2xl:text-4xl font-bold text-primary">FANANI</h1>
                         </div>
                     </Link>

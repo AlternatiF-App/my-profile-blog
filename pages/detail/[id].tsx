@@ -1,6 +1,5 @@
 /* eslint-disable array-callback-return */
 import Header from '../../components/Header/Header'
-import ItemReview from '../../components/DetailPortofolio/ItemReview'
 import { useState, useCallback, useEffect } from 'react'
 import { getMediumData } from '../api/api'
 import { useRouter } from 'next/router'
@@ -74,8 +73,8 @@ const DetailBlog = () => {
                         <span onClick={() => menuChange('desc')} className={`${menu === 'desc' ? ('border-b-2 border-primary bg-secondary text-primary') : ('border-b-2 border-b-transparent text-gray-400')} w-1/2 lg:w-auto flex justify-center items-center transition-all duration-300 ease-in-out px-4 py-2 cursor-pointer font-bold`}>
                             Description
                         </span>
-                        <span onClick={() => menuChange('review')} className={`${menu === 'review' ? ('border-b-2 border-primary bg-secondary text-primary') : ('border-b-2 border-b-transparent text-gray-400')} w-1/2 lg:w-auto flex justify-center items-center transition-all duration-300 ease-in-out px-4 py-2 cursor-pointer font-bold`}>
-                            Review
+                        <span onClick={() => menuChange('menu')} className={`${menu === 'menu' ? ('border-b-2 border-primary bg-secondary text-primary') : ('border-b-2 border-b-transparent text-gray-400')} w-1/2 lg:w-auto flex justify-center items-center transition-all duration-300 ease-in-out px-4 py-2 cursor-pointer font-bold`}>
+                            Menu2
                         </span>
                     </div>
                     <div className="py-10">
@@ -90,13 +89,6 @@ const DetailBlog = () => {
                                         dangerouslySetInnerHTML={{ __html: feed.content }}>
                                     </div>
                                 </div>
-                            </div>
-                        }
-                        {
-                            menu === 'review' &&
-                            <div className="lg:px-4 space-y-16 transition-all duration-300 ease-in-out">
-                                <ItemReview/>
-                                <ItemReview/>
                             </div>
                         }
                     </div>

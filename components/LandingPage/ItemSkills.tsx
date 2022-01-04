@@ -12,7 +12,7 @@ const ItemSkills = ({ skills, bar, percent }:ItemSkillsProps) => {
         </span>
         <div className="flex items-center space-x-4 justify-between">
             <div className="relative w-full">
-                <div className="h-2.5 w-full bg-secondary"/>
+                <div className="h-2.5 w-full bg-gray-200"/>
                 <div className={`${bar} absolute top-0 h-2.5 bg-primary`}/>
             </div>
             <span className="block w-14 text-right">
