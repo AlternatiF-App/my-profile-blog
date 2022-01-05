@@ -45,7 +45,7 @@ const cv = () => {
                             <ItemEducation start={2016} end={2021} location={'stiki malang'}/>
                         </div>
                     </div>
-                    <div className="w-full lg:w-1/3 pt-4 pb-2 lg:pt-0 lg:pb-0 lg:px-4 lg:py-8">
+                    <div className="w-full lg:w-1/3 pt-4 pb-2 lg:pt-8 lg:pb-8 lg:px-4">
                         <h2 className="text-xl lg:text-2xl font-medium">Experience</h2>
                         <div className="pt-8 space-y-6">
                             <ItemExperience
@@ -65,8 +65,8 @@ const cv = () => {
                             />
                         </div>
                     </div>
-                    <div className="w-full lg:w-1/3 pt-4 pb-2 lg:pt-0 lg:pb-0 lg:px-4 lg:py-8">
-                        <h2 className="text-xl lg:text-2xl font-medium">Experience</h2>
+                    <div className="w-full lg:w-1/3 pt-4 pb-2 lg:pt-8 lg:pb-8 lg:px-4">
+                        <h2 className="text-xl lg:text-2xl font-medium">Skills</h2>
                         <div className="pt-8 space-y-6">
                             <ItemSkills skills={'Javascript'} bar={'w-3/5'} percent={100}/>
                             <ItemSkills skills={'HTML'} bar={'w-3/4'} percent={80}/>

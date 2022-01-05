@@ -14,14 +14,31 @@
 
 /* content */
 .content {
-    width: 100%;
-    clear: both;
+    width: 100% !important;
+    clear: both !important;
 }
 
 .content img {
     max-width: 50%;
     margin: 0 auto;
     padding: 40px 0;
+}
+
+.content pre{
+    display: block;
+    font-size: 87.5%;
+    white-space: pre !important;
+}
+
+@media (max-width: 640px) {
+    .content img {
+        max-width: 100%;
+    }
+
+    .content p {
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+    }
 }
 
 .content h4 {

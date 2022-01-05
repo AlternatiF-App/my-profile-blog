@@ -5,7 +5,7 @@ interface ItemFooterProps{
 
 const ItemFooter = ({ url, name }:ItemFooterProps) => {
   return (
-        <div className="flex">
+        <div>
             <div className="w-auto cursor-pointer hover:text-primary no-underline hover:underline transition-all duration-300 ease-in-out">
                 {name}
             </div>

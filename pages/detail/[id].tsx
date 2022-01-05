@@ -43,15 +43,15 @@ const DetailBlog = () => {
             <Header/>
             <div className="font-oxygen w-full 2xl:w-10/12 2xl:mx-auto px-4 py-8 lg:px-8 lg:py-20">
                 <div className="w-full lg:flex lg:space-x-8">
-                    <div className="w-1/3 2xl:p-10">
+                    <div className="w-full lg:w-1/3 2xl:p-10">
                         <img className="w-full"
                             src={feed.thumbnail}
                             alt="detail-image"
                         />
                     </div>
                     <div className="w-full lg:w-2/3 pt-8 lg:pt-0 2xl:px-8 2xl:py-16">
-                        <h1 className="text-4xl lg:text-5xl font-medium">{feed.title}</h1>
-                        <div className="flex space-x-20 pt-2">
+                        <h1 className="text-2xl lg:text-5xl font-medium">{feed.title}</h1>
+                        <div className="flex text-sm lg:text-base space-x-20 pt-2">
                             <span className="block font-semibold">
                                 {feed.author}
                             </span>
@@ -59,7 +59,7 @@ const DetailBlog = () => {
                                 Created At : {moment(feed.pubDate).format('DD MMMM YYYY')}
                             </span>
                         </div>
-                        <div className="pt-8 flex space-x-2">
+                        <div className="pt-8 flex flex-wrap gap-y-2 lg:gap-y-0 space-x-2">
                             {
                                 feed.categories.map((item:any, index:number) => {
                                   return <span key={index} className="py-1 px-3 rounded-full text-sm bg-primary text-secondary">{item}</span>
@@ -85,7 +85,7 @@ const DetailBlog = () => {
                                     <span className="text-base font-light">
                                         Created At : {moment(feed.pubDate).format('DD MMMM YYYY')}
                                     </span>
-                                    <div className="pt-4 px-8 font-oxygen content"
+                                    <div className="pt-4 px-8 w-full font-oxygen content"
                                         dangerouslySetInnerHTML={{ __html: feed.content }}>
                                     </div>
                                 </div>
