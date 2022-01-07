@@ -9,7 +9,7 @@ const Footer = () => {
                             src="/assets/images/logo.png"
                         />
                     </div>
-                    <h1 className="text-5xl text-left lg:text-center text-white tracking-widest">Let's Talk?</h1>
+                    <h1 className="text-5xl lg:text-left text-center text-white tracking-widest">Let's Talk?</h1>
                     <div className="flex justify-center lg:block lg:justify-start">
                         <button className="px-4 py-2 text-secondary border border-secondary rounded-md">
                             WhatsApp Me
