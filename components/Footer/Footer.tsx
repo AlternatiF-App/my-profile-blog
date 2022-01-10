@@ -2,7 +2,7 @@
 const Footer = () => {
   return (
         <div className="bg-third font-oxygen">
-            <div className="w-full 2xl:w-10/12 2xl:mx-auto px-8 py-8 lg:px-10 lg:py-16">
+            <div className="w-full 2xl:w-11/12 2xl:mx-auto px-8 py-8 lg:px-10 lg:py-16">
                 <div className="lg:flex lg:items-center lg:justify-between space-y-4 lg:space-y-0">
                     <div className="flex justify-center lg:justify-start lg:block">
                         <img className="h-6 lg:h-8 2xl:h-10 w-auto"

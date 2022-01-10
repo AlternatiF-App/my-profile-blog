@@ -1,11 +1,11 @@
 import { MenuIcon } from '@heroicons/react/outline'
 import { useState } from 'react'
-// import Link from 'next/link'
-// import { useRouter } from 'next/router'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const Header = () => {
-//   const router = useRouter()
-//   const params = router.pathname.substring(1)
+  const router = useRouter()
+  const params = router.pathname.substring(1)
   const [menu, setMenu] = useState(false)
   const active:string = 'border-r-4 border-secondary'
 
@@ -17,10 +17,10 @@ const Header = () => {
                 />
             </div>
             <ul className="hidden lg:flex space-x-8 lg:text-base 2xl:text-lg font-medium">
-                <li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">Home</li>
+                <Link href="/"><li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">Home</li></Link>
                 <li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">About</li>
                 <li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">Portofolio</li>
-                <li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">Blog</li>
+                <Link href="/blog"><li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">Blog</li></Link>
                 <li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">Contact</li>
             </ul>
             <MenuIcon
@@ -38,10 +38,10 @@ const Header = () => {
                             />
                         </div>
                         <ul className="pl-4 py-8">
-                            <li className={`${active} cursor-pointer py-3`}>Home</li>
+                            <Link href="/"><li className={`${params === '' && active} cursor-pointer py-3`}>Home</li></Link>
                             <li className={'cursor-pointer py-3'}>About</li>
                             <li className={'cursor-pointer py-3'}>Portofolio</li>
-                            <li className={'cursor-pointer py-3'}>Blog</li>
+                            <Link href="/blog"><li className={`${params === 'blog' && active} cursor-pointer py-3`}>Blog</li></Link>
                             <li className={'cursor-pointer py-3'}>Contact</li>
                         </ul>
                         <div className="fixed w-5/6 max-w-sm left-0 bottom-0 px-4 mb-4">

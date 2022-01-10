@@ -12,6 +12,11 @@
     display: none;
 }
 
+/* shadow */
+.custom-shadow{
+    box-shadow: 10 0 0 16%;
+}
+
 /* content */
 .content {
     width: 100% !important;

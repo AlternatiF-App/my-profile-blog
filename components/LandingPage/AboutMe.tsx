@@ -2,7 +2,7 @@
 const AboutMe = () => {
   return (
         <div className="font-oxygen bg-primary px-4 py-10 lg:px-0">
-            <div className="w-full 2xl:w-10/12 2xl:mx-auto bg-third text-white lg:flex">
+            <div className="w-full 2xl:w-11/12 2xl:mx-auto bg-third text-white lg:flex">
                 <div className="w-full lg:w-1/3 px-8 py-10 lg:px-10 lg:py-20">
                     <div>
                         <img className="w-full"
