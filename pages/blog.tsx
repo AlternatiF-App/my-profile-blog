@@ -17,11 +17,13 @@ const blog = () => {
   const onFilter = (e:string) => {
     setFilter(e)
     setBtnFilter(false)
+    setSwipe(false)
   }
 
   const onSort = (e:string) => {
     setSort(e)
     setBtnSort(false)
+    setSwipe(false)
   }
 
   const openSwipe = (e:string) => {
@@ -69,7 +71,7 @@ const blog = () => {
                                 </div>
                             }
                         </div>
-                        <div className="w-44 relative flex justify-end lg:justify-start">
+                        <div className="w-44 relative flex justify-end lg:block">
                             <button onClick={() => {
                               setBtnSort(!btnSort)
                               openSwipe('sort')
@@ -98,7 +100,7 @@ const blog = () => {
                             }
                         </div>
                     </div>
-                    <div className="py-6 lg:flex lg:flex-wrap lg:gap-8 lg:justify-between space-y-10 lg:space-y-0">
+                    <div className="py-6 lg:flex lg:flex-wrap lg:gap-8 space-y-10 lg:space-y-0">
                         <ItemBlog
                             width={'blog'}
                             thumbnail={'web-design.jpg'}
