@@ -38,7 +38,7 @@ const blog = () => {
   return (
         <>
             <Header/>
-            <div className="bg-primary hide-scroll-bar">
+            <div className="bg-primary font-oxygen hide-scroll-bar">
                 <div className="w-full 2xl:w-11/12 2xl:mx-auto px-4 py-6 lg:px-8 lg:py-12">
                     <h1 className="text-xl lg:text-3xl font-medium tracking-wider text-white">Blog</h1>
                     <div className="h-1 w-8 bg-secondary rounded-full"/>

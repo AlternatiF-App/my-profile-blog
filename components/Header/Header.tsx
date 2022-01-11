@@ -19,7 +19,7 @@ const Header = () => {
             <ul className="hidden lg:flex space-x-8 lg:text-base 2xl:text-lg font-medium">
                 <Link href="/"><li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">Home</li></Link>
                 <Link href="/about"><li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">About</li></Link>
-                <li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">Portofolio</li>
+                <Link href="/portofolio"><li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">Portofolio</li></Link>
                 <Link href="/blog"><li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">Blog</li></Link>
             </ul>
             <MenuIcon
@@ -39,7 +39,7 @@ const Header = () => {
                         <ul className="pl-4 py-8">
                             <Link href="/"><li className={`${params === '' && active} cursor-pointer py-3`}>Home</li></Link>
                             <Link href="/about"><li className={`${params === 'about' && active} cursor-pointer py-3`}>About</li></Link>
-                            <li className={'cursor-pointer py-3'}>Portofolio</li>
+                            <Link href="/portofolio"><li className={`${params === 'portofolio' && active} cursor-pointer py-3`}>Portofolio</li></Link>
                             <Link href="/blog"><li className={`${params === 'blog' && active} cursor-pointer py-3`}>Blog</li></Link>
                         </ul>
                         <div className="fixed w-5/6 max-w-sm left-0 bottom-0 px-4 mb-4">
