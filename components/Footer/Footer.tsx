@@ -20,7 +20,6 @@ const Footer = () => {
                     <li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">About</li>
                     <li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">Portofolio</li>
                     <li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">Blog</li>
-                    <li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">Contact</li>
                 </ul>
                 <div className="flex justify-center pt-4">
                     <span className="text-white text-xs">&copy; copyright 2021 - Ahmad Fanani</span>

@@ -13,13 +13,13 @@ const about = () => {
                         <div className="w-full h-96 lg:w-1/3 lg:h-pict">
                             <img className="w-full h-full object-cover"
                                 src='/assets/images/foto.jpg'
+                                alt="picture"
                             />
                         </div>
                         <div className="w-full lg:w-2/3 h-pict bg-third px-4 lg:px-8 2xl:px-14 py-6 my-8 lg:my-0">
                             <div className="flex justify-end text-white">
                                 <span className="block flex items-center text-base font-light tracking-widest">
-                                    <PhoneIcon className="h-4 w-4 mr-2" fill="currentColor" stroke="none"/>
-                                    +62|821-4293-1584
+                                    <PhoneIcon className="h-4 w-4 mr-2" fill="currentColor" stroke="none"/> +62|821-4293-1584
                                 </span>
                             </div>
                             <div className="pt-8 lg:pt-20 text-white">

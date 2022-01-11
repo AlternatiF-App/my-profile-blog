@@ -21,7 +21,6 @@ const Header = () => {
                 <Link href="/about"><li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">About</li></Link>
                 <li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">Portofolio</li>
                 <Link href="/blog"><li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">Blog</li></Link>
-                <li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">Contact</li>
             </ul>
             <MenuIcon
                 onClick={() => setMenu(!menu)}
@@ -39,10 +38,9 @@ const Header = () => {
                         </div>
                         <ul className="pl-4 py-8">
                             <Link href="/"><li className={`${params === '' && active} cursor-pointer py-3`}>Home</li></Link>
-                            <Link href="/about"><li className={'cursor-pointer py-3'}>About</li></Link>
+                            <Link href="/about"><li className={`${params === 'about' && active} cursor-pointer py-3`}>About</li></Link>
                             <li className={'cursor-pointer py-3'}>Portofolio</li>
                             <Link href="/blog"><li className={`${params === 'blog' && active} cursor-pointer py-3`}>Blog</li></Link>
-                            <li className={'cursor-pointer py-3'}>Contact</li>
                         </ul>
                         <div className="fixed w-5/6 max-w-sm left-0 bottom-0 px-4 mb-4">
                             <button className="w-full px-4 py-2 rounded-xl bg-secondary text-black">
