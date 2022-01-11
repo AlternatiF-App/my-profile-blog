@@ -18,7 +18,7 @@ const Header = () => {
             </div>
             <ul className="hidden lg:flex space-x-8 lg:text-base 2xl:text-lg font-medium">
                 <Link href="/"><li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">Home</li></Link>
-                <li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">About</li>
+                <Link href="/about"><li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">About</li></Link>
                 <li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">Portofolio</li>
                 <Link href="/blog"><li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">Blog</li></Link>
                 <li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">Contact</li>
@@ -39,7 +39,7 @@ const Header = () => {
                         </div>
                         <ul className="pl-4 py-8">
                             <Link href="/"><li className={`${params === '' && active} cursor-pointer py-3`}>Home</li></Link>
-                            <li className={'cursor-pointer py-3'}>About</li>
+                            <Link href="/about"><li className={'cursor-pointer py-3'}>About</li></Link>
                             <li className={'cursor-pointer py-3'}>Portofolio</li>
                             <Link href="/blog"><li className={`${params === 'blog' && active} cursor-pointer py-3`}>Blog</li></Link>
                             <li className={'cursor-pointer py-3'}>Contact</li>
