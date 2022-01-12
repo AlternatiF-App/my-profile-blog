@@ -1,4 +1,7 @@
+import Link from 'next/link'
+
 interface ItemBlogProps{
+    link?: string;
     width: string;
     thumbnail: string;
     category: string;
@@ -6,8 +9,9 @@ interface ItemBlogProps{
     years: number;
 }
 
-const ItemBlog = ({ width, thumbnail, category, title, years }:ItemBlogProps) => {
+const ItemBlog = ({ link, width, thumbnail, category, title, years }:ItemBlogProps) => {
   return (
+        <Link href="/detail/detail">
         <div className={`${width === 'blog' ? 'w-full lg:w-1080 xl:w-1280 2xl:w-1920' : 'w-64 lg:w-96'} cursor-pointer custom-shadow relative bg-third text-white border-b-2 border-transparent hover:border-secondary transition-all duration-300 ease-in-out`}>
             <div>
                 <img className="w-full h-auto"
@@ -23,6 +27,7 @@ const ItemBlog = ({ width, thumbnail, category, title, years }:ItemBlogProps) =>
                 </div>
             </div>
         </div>
+        </Link>
   )
 }
 
