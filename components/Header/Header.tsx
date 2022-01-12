@@ -44,7 +44,9 @@ const Header = () => {
                         </ul>
                         <div className="fixed w-5/6 max-w-sm left-0 bottom-0 px-4 mb-4">
                             <button className="w-full px-4 py-2 rounded-xl bg-secondary text-black">
-                                WhatsApp Me
+                                <a href="https://wa.me/6282142931584?text=We%20are%20interested%20in%20working%20with%20you">
+                                    WhatsApp Me
+                                </a>
                             </button>
                         </div>
                     </nav>

@@ -1,10 +1,12 @@
+/* eslint-disable array-callback-return */
 import Footer from '../components/Footer/Footer'
 import Header from '../components/Header/Header'
 import ItemBlog from '../components/LandingPage/Items/ItemBlog'
 import { ChevronDownIcon, CheckIcon } from '@heroicons/react/outline'
-import { useState } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { BottomSheet } from 'react-spring-bottom-sheet'
 import 'react-spring-bottom-sheet/dist/style.css'
+import { getMediumData } from './api/api'
 
 const blog = () => {
   const [btnFilter, setBtnFilter] = useState(false)
@@ -13,6 +15,20 @@ const blog = () => {
   const [sort, setSort] = useState('')
   const [swipe, setSwipe] = useState(false)
   const [service, setService] = useState('')
+  const [data, setData] = useState([])
+  const [profile, setProfile] = useState({
+    image: ''
+  })
+
+  const getData = useCallback(async () => {
+    const res = await getMediumData()
+    setProfile(res.feed)
+    setData(res.items)
+  }, [getMediumData])
+
+  useEffect(() => {
+    getData()
+  }, [])
 
   const onFilter = (e:string) => {
     setFilter(e)
@@ -100,42 +116,24 @@ const blog = () => {
                             }
                         </div>
                     </div>
-                    <div className="py-6 lg:flex lg:flex-wrap lg:gap-8 space-y-10 lg:space-y-0">
-                        <ItemBlog
-                            width={'blog'}
-                            thumbnail={'web-design.jpg'}
-                            category={'NextJS'}
-                            title={'Installing NextJS'}
-                            years={2020}
-                        />
-                        <ItemBlog
-                            width={'blog'}
-                            thumbnail={'web-design.jpg'}
-                            category={'NextJS'}
-                            title={'Installing NextJS'}
-                            years={2020}
-                        />
-                        <ItemBlog
-                            width={'blog'}
-                            thumbnail={'web-design.jpg'}
-                            category={'NextJS'}
-                            title={'Installing NextJS'}
-                            years={2020}
-                        />
-                        <ItemBlog
-                            width={'blog'}
-                            thumbnail={'web-design.jpg'}
-                            category={'NextJS'}
-                            title={'Installing NextJS'}
-                            years={2020}
-                        />
-                        <ItemBlog
-                            width={'blog'}
-                            thumbnail={'web-design.jpg'}
-                            category={'NextJS'}
-                            title={'Installing NextJS'}
-                            years={2020}
-                        />
+                    <div className="py-6 lg:grid lg:grid-cols-4 lg:gap-8 space-y-10 lg:space-y-0">
+                        {
+                            data.map((item:any, index:number) => {
+                              return (
+                                    <ItemBlog
+                                        key={index}
+                                        width={'blog'}
+                                        thumbnail={item.thumbnail}
+                                        category={item.categories[1]}
+                                        title={item.title}
+                                        years={2020}
+                                        avatar={profile.image}
+                                        name={item.author}
+                                        date={item.pubDate}
+                                    />
+                              )
+                            })
+                        }
                     </div>
                 </div>
             </div>
