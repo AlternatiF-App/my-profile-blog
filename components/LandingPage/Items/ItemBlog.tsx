@@ -8,7 +8,7 @@ interface ItemBlogProps{
     thumbnail: string;
     category: string;
     title: string;
-    years: number;
+    years: string | number;
 
     avatar: string;
     name: string;
@@ -28,7 +28,7 @@ const ItemBlog = ({ link, width, thumbnail, category, title, years, avatar, name
             <div className={`${width === 'blog' ? 'w-full' : 'w-64 lg:w-96'} px-4 py-4 lg:px-6 lg:py-6`}>
                 <div className="flex justify-between space-x-4 items-center lg:h-6">
                     <span className="block text-sm 2xl:text-xl font-light text-secondary capitalize">{category}</span>
-                    <span className="block text-xs 2xl:text-sm font-light">{years}</span>
+                    <span className="block text-xs 2xl:text-sm font-light">{moment(years).format('YYYY')}</span>
                 </div>
                 <h1 className="text-base 2xl:text-2xl lg:h-16 pt-4">
                     {title.length > 40 ? title.substring(0, 40) + ' ...' : title}

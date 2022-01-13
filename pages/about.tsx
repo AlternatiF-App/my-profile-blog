@@ -41,7 +41,7 @@ const about = () => {
                                 </div>
                             </div>
                             <div className="pt-8 lg:pt-20">
-                                <button className="px-4 py-2 w-full lg:w-auto flex items-center bg-secondary text-black rounded-md tracking-wider">
+                                <button className="px-4 py-2 w-full lg:w-auto flex justify-center items-center bg-secondary text-black rounded-md tracking-wider">
                                     Download Resume
                                     <DownloadIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>
                                 </button>

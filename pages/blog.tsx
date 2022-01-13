@@ -126,7 +126,7 @@ const blog = () => {
                                         thumbnail={item.thumbnail}
                                         category={item.categories[1]}
                                         title={item.title}
-                                        years={2020}
+                                        years={item.pubDate}
                                         avatar={profile.image}
                                         name={item.author}
                                         date={item.pubDate}
