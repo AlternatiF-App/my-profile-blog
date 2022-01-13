@@ -1,7 +1,7 @@
 
 const ItemPortofolio = () => {
   return (
-        <div className="relative w-full lg:w-1080 xl:w-1280 2xl:w-1920 h-52 lg:h-40 xl:h-52 2xl:h-64 rounded-md group">
+        <div className="relative w-full h-52 lg:h-40 xl:h-52 2xl:h-64 rounded-md group">
             <img className="w-full h-full object-cover"
                 src="/assets/images/web-design.jpg"
                 alt="image"

@@ -9,14 +9,7 @@ const MainContent = () => {
                     <span className="block text-lg lg:text-2xl font-light tracking-widest">Frontend Developer</span>
                     <div className="pt-8">
                         <button className="px-6 py-2 w-full lg:w-auto rounded-md bg-secondary text-black">
-                            <a
-                                download
-                                href="/files/CV.pdf"
-                                alt="Resume"
-                                target="_blank"
-                                rel="noopener noreferrer">
-                                Download Resume
-                            </a>
+                            Download Resume
                         </button>
                     </div>
                 </div>

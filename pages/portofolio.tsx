@@ -10,7 +10,7 @@ const portofolio = () => {
                     <div className="w-full 2xl:w-11/12 lg:mx-auto px-4 py-10 lg:px-8 py-20">
                         <h1 className="text-xl lg:text-3xl font-medium tracking-wider text-white">Portofolio</h1>
                         <div className="h-1 w-10 bg-secondary rounded-full"/>
-                        <div className="flex flex-wrap gap-8 pt-10">
+                        <div className="lg:grid lg:grid-cols-4 gap-8 pt-10">
                             <ItemPortofolio/>
                             <ItemPortofolio/>
                             <ItemPortofolio/>

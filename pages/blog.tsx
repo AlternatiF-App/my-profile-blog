@@ -65,23 +65,23 @@ const blog = () => {
                               openSwipe('filter')
                               setBtnSort(false)
                             }}
-                                className="lg:w-full px-2 py-1 lg:px-4 lg:py-2 text-white lg:border lg:border-secondary lg:rounded-md flex justify-between items-center">
-                                {filter === '' ? 'Filter' : filter} <ChevronDownIcon className="h-5 w-5 text-white ml-2" fill="none" stroke="currentColor"/>
+                                className="lg:w-full capitalize px-2 py-1 lg:px-4 lg:py-2 text-white lg:border lg:border-secondary lg:rounded-md flex justify-between items-center">
+                                {filter === '' ? 'Filter' : filter.replace('-', ' ')} <ChevronDownIcon className="h-5 w-5 text-white ml-2" fill="none" stroke="currentColor"/>
                             </button>
                             {
                                 btnFilter && <div className="hidden lg:block absolute py-1 z-50 w-full bg-primary mt-1 rounded-md">
                                     <ul>
-                                        <li onClick={() => onFilter('HTML')}
+                                        <li onClick={() => onFilter('react')}
                                             className="cursor-pointer font-light text-sm tracking-widest hover:bg-secondary hover:text-black text-white flex justify-between items-center px-4 py-1">
-                                            HTML {filter === 'HTML' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
+                                            ReactJS {filter === 'react' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
                                         </li>
-                                        <li onClick={() => onFilter('CSS')}
+                                        <li onClick={() => onFilter('javascript')}
                                             className="cursor-pointer font-light text-sm tracking-widest hover:bg-secondary hover:text-black text-white flex justify-between items-center px-4 py-1">
-                                            CSS {filter === 'CSS' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
+                                            JavaScript {filter === 'javascript' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
                                         </li>
-                                        <li onClick={() => onFilter('JavaScript')}
+                                        <li onClick={() => onFilter('front-end-development')}
                                             className="cursor-pointer font-light text-sm tracking-widest hover:bg-secondary hover:text-black text-white flex justify-between items-center px-4 py-1">
-                                            JavaScript {filter === 'JavaScript' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
+                                            Frontend Dev {filter === 'front-end-development' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
                                         </li>
                                     </ul>
                                 </div>
@@ -118,8 +118,9 @@ const blog = () => {
                     </div>
                     <div className="py-6 lg:grid lg:grid-cols-4 lg:gap-8 space-y-10 lg:space-y-0">
                         {
-                            data.map((item:any, index:number) => {
-                              return (
+                            filter === ''
+                              ? data.map((item:any, index:number) => {
+                                return (
                                     <ItemBlog
                                         key={index}
                                         width={'blog'}
@@ -131,8 +132,23 @@ const blog = () => {
                                         name={item.author}
                                         date={item.pubDate}
                                     />
-                              )
-                            })
+                                )
+                              })
+                              : data.filter((category:any) => category.categories.includes(filter)).map((item:any, index:number) => {
+                                return (
+                                      <ItemBlog
+                                          key={index}
+                                          width={'blog'}
+                                          thumbnail={item.thumbnail}
+                                          category={item.categories[1]}
+                                          title={item.title}
+                                          years={item.pubDate}
+                                          avatar={profile.image}
+                                          name={item.author}
+                                          date={item.pubDate}
+                                      />
+                                )
+                              })
                         }
                     </div>
                 </div>
