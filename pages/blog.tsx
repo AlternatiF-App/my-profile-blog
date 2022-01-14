@@ -239,34 +239,38 @@ const blog = () => {
                       ? <div className="block lg:hidden relative w-full font-oxygen text-sm py-2 text-white">
                         <h1 className="text-lg font-medium px-4">Filter</h1>
                         <ul className="py-2">
-                            <li onClick={() => onFilter('HTML')}
+                            <li onClick={() => onFilter('react')}
                                 className="cursor-pointer font-light text-sm tracking-widest hover:bg-secondary hover:text-black text-white flex justify-between items-center px-4 py-2">
-                                HTML {filter === 'HTML' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
+                                ReactJS {filter === 'react' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
                             </li>
-                            <li onClick={() => onFilter('CSS')}
+                            <li onClick={() => onFilter('javascript')}
                                 className="cursor-pointer font-light text-sm tracking-widest hover:bg-secondary hover:text-black text-white flex justify-between items-center px-4 py-2">
-                                CSS {filter === 'CSS' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
+                                JavaScript {filter === 'javascript' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
                             </li>
-                            <li onClick={() => onFilter('JavaScript')}
+                            <li onClick={() => onFilter('front-end-development')}
                                 className="cursor-pointer font-light text-sm tracking-widest hover:bg-secondary hover:text-black text-white flex justify-between items-center px-4 py-2">
-                                JavaScript {filter === 'JavaScript' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
+                                Frontend Dev {filter === 'front-end-development' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
                             </li>
                         </ul>
                     </div>
                       : <div className="block lg:hidden relative w-full font-oxygen text-sm py-2 text-white">
                         <h1 className="text-lg font-medium px-4">Sort</h1>
                         <ul className="py-2">
-                            <li onClick={() => onSort('A - Z')}
+                            <li onClick={() => onSort('a - z')}
                                 className="cursor-pointer font-light text-sm tracking-widest hover:bg-secondary hover:text-black text-white flex justify-between items-center px-4 py-2">
-                                A - Z {sort === 'A - Z' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
+                                A - Z {sort === 'a - z' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
                             </li>
-                            <li onClick={() => onSort('Z - A')}
+                            <li onClick={() => onSort('z - a')}
                                 className="cursor-pointer font-light text-sm tracking-widest hover:bg-secondary hover:text-black text-white flex justify-between items-center px-4 py-2">
-                                Z - A {sort === 'Z - A' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
+                                Z - A {sort === 'z - a' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
                             </li>
-                            <li onClick={() => onSort('Year')}
+                            <li onClick={() => onSort('newest')}
                                 className="cursor-pointer font-light text-sm tracking-widest hover:bg-secondary hover:text-black text-white flex justify-between items-center px-4 py-2">
-                                Year {sort === 'Year' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
+                                Newest {sort === 'newest' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
+                            </li>
+                            <li onClick={() => onSort('longest')}
+                                className="cursor-pointer font-light text-sm tracking-widest hover:bg-secondary hover:text-black text-white flex justify-between items-center px-4 py-2">
+                                Longest {sort === 'longest' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
                             </li>
                         </ul>
                     </div>
