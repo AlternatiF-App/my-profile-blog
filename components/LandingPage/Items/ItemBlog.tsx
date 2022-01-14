@@ -30,8 +30,8 @@ const ItemBlog = ({ link, width, thumbnail, category, title, years, avatar, name
                     <span className="block text-sm 2xl:text-xl font-light text-secondary capitalize">{category}</span>
                     <span className="block text-xs 2xl:text-sm font-light">{moment(years).format('YYYY')}</span>
                 </div>
-                <h1 className="text-base 2xl:text-2xl lg:h-16 pt-4">
-                    {title.length > 40 ? title.substring(0, 40) + ' ...' : title}
+                <h1 className="text-base 2xl:text-2xl truncate pt-4">
+                    {title}
                 </h1>
                 <div className='pt-8 flex space-x-4 items-center'>
                     <img className='w-10 h-10 2xl:w-12 2xl:h-12 object-cover rounded-full'

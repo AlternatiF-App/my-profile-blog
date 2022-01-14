@@ -66,7 +66,7 @@ const blog = () => {
                               setBtnSort(false)
                             }}
                                 className="lg:w-full capitalize px-2 py-1 lg:px-4 lg:py-2 text-white lg:border lg:border-secondary lg:rounded-md flex justify-between items-center">
-                                {filter === '' ? 'Filter' : filter.replace('-', ' ')} <ChevronDownIcon className="h-5 w-5 text-white ml-2" fill="none" stroke="currentColor"/>
+                                <span className="block truncate">{filter === '' ? 'Filter' : filter.replace('-', ' ')}</span> <ChevronDownIcon className="h-5 w-5 text-white ml-2" fill="none" stroke="currentColor"/>
                             </button>
                             {
                                 btnFilter && <div className="hidden lg:block absolute py-1 z-50 w-full bg-primary mt-1 rounded-md">
@@ -94,22 +94,26 @@ const blog = () => {
                               setBtnFilter(false)
                             }}
                                 className="lg:w-full px-2 py-1 lg:px-4 lg:py-2 text-white lg:border lg:border-secondary lg:rounded-md flex justify-between items-center">
-                                {sort === '' ? 'Sort' : sort} <ChevronDownIcon className="h-5 w-5 text-white ml-2" fill="none" stroke="currentColor"/>
+                                <span className="block truncate capitalize">{sort === '' ? 'Sort' : sort}</span> <ChevronDownIcon className="h-5 w-5 text-white ml-2" fill="none" stroke="currentColor"/>
                             </button>
                             {
                                 btnSort && <div className="hidden lg:block absolute py-1 z-50 w-full bg-primary mt-1 rounded-md">
                                     <ul>
-                                        <li onClick={() => onSort('A - Z')}
+                                        <li onClick={() => onSort('a - z')}
                                             className="cursor-pointer font-light text-sm tracking-widest hover:bg-secondary hover:text-black text-white flex justify-between items-center px-4 py-1">
-                                            A - Z {sort === 'A - Z' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
+                                            A - Z {sort === 'a - z' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
                                         </li>
-                                        <li onClick={() => onSort('Z - A')}
+                                        <li onClick={() => onSort('z - a')}
                                             className="cursor-pointer font-light text-sm tracking-widest hover:bg-secondary hover:text-black text-white flex justify-between items-center px-4 py-1">
-                                            Z - A {sort === 'Z - A' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
+                                            Z - A {sort === 'z - a' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
                                         </li>
-                                        <li onClick={() => onSort('Year')}
+                                        <li onClick={() => onSort('newest')}
                                             className="cursor-pointer font-light text-sm tracking-widest hover:bg-secondary hover:text-black text-white flex justify-between items-center px-4 py-1">
-                                            Year {sort === 'Year' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
+                                            Newest {sort === 'newest' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
+                                        </li>
+                                        <li onClick={() => onSort('longest')}
+                                            className="cursor-pointer font-light text-sm tracking-widest hover:bg-secondary hover:text-black text-white flex justify-between items-center px-4 py-1">
+                                            Longest {sort === 'longest' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
                                         </li>
                                     </ul>
                                 </div>
@@ -118,8 +122,58 @@ const blog = () => {
                     </div>
                     <div className="py-6 lg:grid lg:grid-cols-4 lg:gap-8 space-y-10 lg:space-y-0">
                         {
-                            filter === ''
-                              ? data.map((item:any, index:number) => {
+                            (filter !== '' && sort === '') &&
+                              data.filter((category:any) => category.categories.includes(filter)).map((item:any, index:number) => {
+                                return (
+                                      <ItemBlog
+                                          key={index}
+                                          width={'blog'}
+                                          thumbnail={item.thumbnail}
+                                          category={item.categories[1]}
+                                          title={item.title}
+                                          years={item.pubDate}
+                                          avatar={profile.image}
+                                          name={item.author}
+                                          date={item.pubDate}
+                                      />
+                                )
+                              })
+                        }
+                        {
+                            (filter === '' && sort === '') &&
+                            data.map((item:any, index:number) => {
+                              return (
+                                  <ItemBlog
+                                      key={index}
+                                      width={'blog'}
+                                      thumbnail={item.thumbnail}
+                                      category={item.categories[1]}
+                                      title={item.title}
+                                      years={item.pubDate}
+                                      avatar={profile.image}
+                                      name={item.author}
+                                      date={item.pubDate}
+                                  />
+                              )
+                            })
+                        }
+                        {
+                            (filter === '' && sort !== '') &&
+                            data.sort((a:any, b:any) => {
+                              if (sort === 'newest') {
+                                return b.pubDate.substring(0, 4) - a.pubDate.substring(0, 4)
+                              }
+                              if (sort === 'longest') {
+                                return a.pubDate.substring(0, 4) - b.pubDate.substring(0, 4)
+                              }
+                              if (sort === 'a - z') {
+                                return a.title > b.title ? 1 : -1
+                              }
+                              if (sort === 'z - a') {
+                                return a.title < b.title ? 1 : -1
+                              }
+                            })
+                              .map((item:any, index:number) => {
                                 return (
                                     <ItemBlog
                                         key={index}
@@ -134,19 +188,37 @@ const blog = () => {
                                     />
                                 )
                               })
-                              : data.filter((category:any) => category.categories.includes(filter)).map((item:any, index:number) => {
+                        }
+                        {
+                            (filter !== '' && sort !== '') &&
+                            data.filter((category:any) => category.categories.includes(filter))
+                              .sort((a:any, b:any) => {
+                                if (sort === 'newest') {
+                                  return b.pubDate.substring(0, 4) - a.pubDate.substring(0, 4)
+                                }
+                                if (sort === 'longest') {
+                                  return a.pubDate.substring(0, 4) - b.pubDate.substring(0, 4)
+                                }
+                                if (sort === 'a - z') {
+                                  return a.title > b.title ? 1 : -1
+                                }
+                                if (sort === 'z - a') {
+                                  return a.title < b.title ? 1 : -1
+                                }
+                              })
+                              .map((item:any, index:number) => {
                                 return (
-                                      <ItemBlog
-                                          key={index}
-                                          width={'blog'}
-                                          thumbnail={item.thumbnail}
-                                          category={item.categories[1]}
-                                          title={item.title}
-                                          years={item.pubDate}
-                                          avatar={profile.image}
-                                          name={item.author}
-                                          date={item.pubDate}
-                                      />
+                                    <ItemBlog
+                                        key={index}
+                                        width={'blog'}
+                                        thumbnail={item.thumbnail}
+                                        category={item.categories[1]}
+                                        title={item.title}
+                                        years={item.pubDate}
+                                        avatar={profile.image}
+                                        name={item.author}
+                                        date={item.pubDate}
+                                    />
                                 )
                               })
                         }
