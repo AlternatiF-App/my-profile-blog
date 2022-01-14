@@ -6,10 +6,18 @@ import Contact from '../components/LandingPage/Contact'
 import FeaturedCode from '../components/LandingPage/FeaturedCode'
 import MainContent from '../components/LandingPage/MainContent'
 import SocialMedia from '../components/LandingPage/SocialMedia'
+import Head from 'next/head'
 
 const Home = () => {
   return (
     <>
+        <Head>
+          <title>Fanani Blog - My Workspace in Here</title>
+          <meta name="description" content="This is the place where I create my work and the place where I write whatever I learn to become a frontend developer."/>
+          <meta property="og:title" content='Fanani Blog - Lets make something new, different great together'/>
+          <meta property="og:description" content='This is the place where I create my work and the place where I write whatever I learn to become a frontend developer.'/>
+          <meta property="og:url" content='https://my-profile-blog.vercel.app/'/>
+        </Head>
         <Header/>
         <MainContent/>
         <AboutMe/>
