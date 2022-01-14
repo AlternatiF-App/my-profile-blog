@@ -159,7 +159,7 @@ const blog = () => {
                         }
                         {
                             (filter === '' && sort !== '') &&
-                            data.sort((a:any, b:any) => {
+                            data.sort((a:any, b:any):any => {
                               if (sort === 'newest') {
                                 return b.pubDate.substring(0, 4) - a.pubDate.substring(0, 4)
                               }
@@ -192,7 +192,7 @@ const blog = () => {
                         {
                             (filter !== '' && sort !== '') &&
                             data.filter((category:any) => category.categories.includes(filter))
-                              .sort((a:any, b:any) => {
+                              .sort((a:any, b:any):any => {
                                 if (sort === 'newest') {
                                   return b.pubDate.substring(0, 4) - a.pubDate.substring(0, 4)
                                 }
