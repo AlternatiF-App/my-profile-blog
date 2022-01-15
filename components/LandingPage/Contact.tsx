@@ -59,7 +59,7 @@ const Contact = () => {
                                 Message
                             </span>
                         </div>
-                        <div className="w-full lg:w-1/2 flex justify-end">
+                        <div className="w-full 2xl:w-1/2 flex justify-end">
                             <button type='button'
                                 className='px-10 py-2 tracking-widest bg-secondary text-black rounded-md'>
                                 Send

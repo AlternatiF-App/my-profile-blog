@@ -9,7 +9,7 @@ const SocialMedia = () => {
                 <div className="mt-10 lg:flex space-y-6 lg:space-y-0 lg:space-x-6 xl:space-x-8 2xl:space-x-10">
                     <ItemSocialMedia link={'https://www.linkedin.com/in/ahmad-fanani-a375b4197/'} title={'LinkedIn'} subtitle={'Ahmad Fanani'}/>
                     <ItemSocialMedia link={'https://github.com/AlternatiF-App'} title={'Github'} subtitle={'Ahmad Fanani'}/>
-                    <ItemSocialMedia link={'#'} title={'Medium'} subtitle={'Ahmad Fanani'}/>
+                    <ItemSocialMedia link={'https://medium.com/@fananiapps'} title={'Medium'} subtitle={'Ahmad Fanani'}/>
                 </div>
             </div>
         </div>

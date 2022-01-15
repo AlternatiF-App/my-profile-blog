@@ -10,7 +10,7 @@ const ItemFeaturedCode = ({ image, title, color }:ItemFeaturedCodeProps) => {
             <div>
                 <img className={`${color} w-32 h-32 rounded-md`}
                     src={`/assets/icons/${image}`}
-                    alt="icons"
+                    alt="icons" loading="lazy"
                 />
             </div>
             <div className="text-center pt-4 w-32">

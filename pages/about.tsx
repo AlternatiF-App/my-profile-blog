@@ -3,8 +3,16 @@ import Header from '../components/Header/Header'
 import { PhoneIcon } from '@heroicons/react/solid'
 import { DownloadIcon } from '@heroicons/react/outline'
 import ItemAbout from '../components/Items/ItemAbout'
+import { saveAs } from 'file-saver'
 
 const about = () => {
+  const saveFile = () => {
+    saveAs(
+      '/assets/files/resume.pdf',
+      'resume.pdf'
+    )
+  }
+
   return (
         <>
             <Header/>
@@ -13,7 +21,7 @@ const about = () => {
                         <div className="w-full h-96 lg:w-1/3 lg:h-pict">
                             <img className="w-full h-full object-cover"
                                 src='/assets/images/foto.jpg'
-                                alt="picture"
+                                alt="picture" loading="lazy"
                             />
                         </div>
                         <div className="w-full lg:w-2/3 h-pict bg-third px-4 lg:px-8 2xl:px-14 py-6 my-8 lg:my-0">
@@ -41,7 +49,7 @@ const about = () => {
                                 </div>
                             </div>
                             <div className="pt-8 lg:pt-20">
-                                <button className="px-4 py-2 w-full lg:w-auto flex justify-center items-center bg-secondary text-black rounded-md tracking-wider">
+                                <button onClick={saveFile} className="px-4 py-2 w-full lg:w-auto flex justify-center items-center bg-secondary text-black rounded-md tracking-wider">
                                     Download Resume
                                     <DownloadIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>
                                 </button>

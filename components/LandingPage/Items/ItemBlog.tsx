@@ -22,7 +22,7 @@ const ItemBlog = ({ link, width, thumbnail, category, title, years, avatar, name
             <div>
                 <img className="w-full h-52 lg:h-36 xl:h-44 2xl:h-64 object-cover"
                     src={thumbnail}
-                    alt="thumbnail"
+                    alt="thumbnail" loading="lazy"
                 />
             </div>
             <div className={`${width === 'blog' ? 'w-full' : 'w-64 lg:w-96'} px-4 py-4 lg:px-6 lg:py-6`}>
@@ -36,7 +36,7 @@ const ItemBlog = ({ link, width, thumbnail, category, title, years, avatar, name
                 <div className='pt-8 flex space-x-4 items-center'>
                     <img className='w-10 h-10 2xl:w-12 2xl:h-12 object-cover rounded-full'
                         src={avatar}
-                        alt="avatar"
+                        alt="avatar" loading="lazy"
                     />
                     <div className="space-y-1">
                         <div className="flex space-x-2 items-center">

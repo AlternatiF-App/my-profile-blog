@@ -12,9 +12,12 @@ const Header = () => {
   return (
         <div className="font-oxygen px-4 py-4 lg:px-8 xl:px-10 2xl:px-14 lg:py-5 bg-primary flex justify-between items-center">
             <div>
-                <img className="h-6 lg:h-8 2xl:h-10 w-auto"
-                    src="/assets/images/logo.png"
-                />
+                <Link href="/">
+                    <img className="h-6 lg:h-8 2xl:h-10 w-auto"
+                        src="/assets/images/logo.png"
+                        alt="logo" loading="lazy"
+                    />
+                </Link>
             </div>
             <ul className="hidden lg:flex space-x-8 lg:text-base 2xl:text-lg font-medium">
                 <Link href="/"><li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">Home</li></Link>
@@ -32,9 +35,12 @@ const Header = () => {
                 <div onClick={() => setMenu(!menu)} className="fixed inset-0 bg-black opacity-25 transition duration-300 ease-in"/>
                    <nav className="fixed top-0 left-0 bottom-0 w-5/6 max-w-sm py-8 bg-primary text-white shadow-md overflow-y-auto ">
                         <div className="px-4">
-                            <img className="h-8 w-auto"
-                                src="/assets/images/logo.png"
-                            />
+                            <Link href="/">
+                                <img className="h-8 w-auto"
+                                    src="/assets/images/logo.png"
+                                    alt="logo" loading="lazy"
+                                />
+                            </Link>
                         </div>
                         <ul className="pl-4 py-8">
                             <Link href="/"><li className={`${params === '' && active} cursor-pointer py-3`}>Home</li></Link>

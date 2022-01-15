@@ -25,8 +25,6 @@ const detail = () => {
       const posts = res.items.filter((item:any) => item.categories.length > 0)
       for (const i in posts) {
         const title = posts[i].title
-        console.log('cok', title)
-        console.log('cokid', id)
         if (title === id) {
           const post = posts[i]
           setData(post)
@@ -46,7 +44,7 @@ const detail = () => {
                         <div className="py-10 flex space-x-6 items-center">
                             <img className="w-14 h-14 lg:w-20 lg:h-20 object-cover rounded-full"
                                 src={profile.image}
-                                alt='avatar'
+                                alt='avatar' loading="lazy"
                             />
                             <div>
                                 <span className="block text-base lg:text-lg 2xl:text-xl font-medium">{data.author}</span>

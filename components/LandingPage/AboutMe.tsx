@@ -1,3 +1,4 @@
+import Link from 'next/link'
 
 const AboutMe = () => {
   return (
@@ -7,7 +8,7 @@ const AboutMe = () => {
                     <div>
                         <img className="w-full"
                             src="/assets/images/about.png"
-                            alt="about"
+                            alt="about" loading="lazy"
                         />
                     </div>
                 </div>
@@ -23,7 +24,9 @@ const AboutMe = () => {
                         I believe with my ability and my hard work can bring the best results for the company. because I love code and I really like the challenge of getting things done.
                     </p>
                     <button className="mt-10 px-8 py-2 w-full lg:w-auto border border-secondary text-secondary font-medium rounded-md">
-                        Learn More
+                        <Link href="/about">
+                            Learn More
+                        </Link>
                     </button>
                 </div>
             </div>
