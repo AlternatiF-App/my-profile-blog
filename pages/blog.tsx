@@ -222,6 +222,7 @@ const blog = () => {
                                 )
                               })
                         }
+                        <div className="h-80"/>
                     </div>
                 </div>
             </div>
