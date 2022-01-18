@@ -107,7 +107,7 @@ const creation = () => {
             <div className="my-4 px-6 py-6 shadow-md border border-gray-100 border-opacity-50 bg-creation1 rounded-3xl space-y-6">
                 <div className="flex space-x-4 items-center">
                     <div onClick={() => onPlay('Tri Suaka - Aku Bukan Jodohnya.mp3')}
-                        className="relative w-16 h-16">
+                        className="relative w-16 h-16 cursor-pointer">
                         <img className="w-full h-full object-cover rounded-xl"
                             src="/assets/icons/mp3.jfif"
                             alt="song images" loading="lazy"
@@ -125,7 +125,7 @@ const creation = () => {
                 </div>
                 <div className="flex space-x-4 items-center">
                     <div onClick={() => onPlay('Mahalini - Bawa Dia Kembali.mp3')}
-                        className="relative w-16 h-16">
+                        className="relative w-16 h-16 cursor-pointer">
                         <img className="w-16 h-16 object-cover rounded-xl"
                             src="/assets/icons/mahalini.jfif"
                             alt="song images" loading="lazy"
@@ -142,15 +142,17 @@ const creation = () => {
                     </div>
                 </div>
                 {
-                    play && <AudioPlayer
-                        className="rounded-t-3xl absolute bottom-0 left-0 right-0 border-t border-gray-100 border-opacity-50 shadow-md"
-                        src={`/assets/musics/${song}`}
-                        autoPlay={play}
-                        showSkipControls={true}
-                        showJumpControls={false}
-                        onClickNext={() => song === ('Mahalini - Bawa Dia Kembali.mp3') ? setSong('Tri Suaka - Aku Bukan Jodohnya.mp3') : setSong('Mahalini - Bawa Dia Kembali.mp3')}
-                        onClickPrevious={() => song === ('Mahalini - Bawa Dia Kembali.mp3') ? setSong('Tri Suaka - Aku Bukan Jodohnya.mp3') : setSong('Mahalini - Bawa Dia Kembali.mp3')}
-                    />
+                    play &&
+                    <div className="rounded-t-3xl fixed px-4 bg-white bottom-0 left-0 right-0 border-t border-gray-100 border-opacity-50 shadow-md">
+                        <AudioPlayer
+                            src={`/assets/musics/${song}`}
+                            autoPlay={play}
+                            showSkipControls={true}
+                            showJumpControls={false}
+                            onClickNext={() => song === ('Mahalini - Bawa Dia Kembali.mp3') ? setSong('Tri Suaka - Aku Bukan Jodohnya.mp3') : setSong('Mahalini - Bawa Dia Kembali.mp3')}
+                            onClickPrevious={() => song === ('Mahalini - Bawa Dia Kembali.mp3') ? setSong('Tri Suaka - Aku Bukan Jodohnya.mp3') : setSong('Mahalini - Bawa Dia Kembali.mp3')}
+                        />
+                    </div>
                 }
             </div>
         </div>
