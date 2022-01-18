@@ -7,7 +7,7 @@ const Footer = () => {
                 <div className="lg:flex lg:items-center lg:justify-between space-y-4 lg:space-y-0">
                     <div className="flex justify-center lg:justify-start lg:block">
                         <Link href="/">
-                            <img className="h-6 lg:h-8 2xl:h-10 w-auto"
+                            <img className="h-6 lg:h-8 2xl:h-10 w-auto cursor-pointer"
                                 src="/assets/images/logo.png"
                                 alt="logo" loading="lazy"
                             />

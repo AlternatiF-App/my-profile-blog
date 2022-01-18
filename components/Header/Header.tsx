@@ -13,7 +13,7 @@ const Header = () => {
         <div className="font-oxygen px-4 py-4 lg:px-8 xl:px-10 2xl:px-14 lg:py-5 bg-primary flex justify-between items-center">
             <div>
                 <Link href="/">
-                    <img className="h-6 lg:h-8 2xl:h-10 w-auto"
+                    <img className="h-6 lg:h-8 2xl:h-10 w-auto cursor-pointer"
                         src="/assets/images/logo.png"
                         alt="logo" loading="lazy"
                     />
