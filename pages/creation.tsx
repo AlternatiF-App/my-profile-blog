@@ -17,7 +17,7 @@ const creation = () => {
   }
 
   return (
-        <div className={`${play ? 'pb-24' : 'pb-6'} font-oxygen relative px-4 pt-6 bg-gray-50`}>
+        <div className={`${play ? 'pb-24' : 'pb-6'} font-oxygen relative px-4 pt-6 bg-gray-50 hide-scroll-bar`}>
             <div className="flex items-center rounded-full bg-white shadow-md">
                 <div className="px-2">
                     <img className="w-8 h-auto"

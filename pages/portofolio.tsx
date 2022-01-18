@@ -11,9 +11,10 @@ const portofolio = () => {
                         <h1 className="text-xl lg:text-3xl font-medium tracking-wider text-white">Portofolio</h1>
                         <div className="h-1 w-10 bg-secondary rounded-full"/>
                         <div className="lg:grid lg:grid-cols-4 gap-8 space-y-10 lg:space-y-0 pt-10">
-                            <ItemPortofolio image={'porto-1.png'}/>
-                            <ItemPortofolio image={'porto-2.png'}/>
-                            <ItemPortofolio image={'porto-3.png'}/>
+                            <ItemPortofolio image={'porto-1.png'} year={2021}/>
+                            <ItemPortofolio image={'porto-2.png'} year={2021}/>
+                            <ItemPortofolio image={'porto-3.png'} year={2021}/>
+                            <ItemPortofolio image={'component1.png'} year={2022}/>
                         </div>
                     </div>
                 </div>
