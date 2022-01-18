@@ -1,6 +1,7 @@
 import { MailIcon } from '@heroicons/react/outline'
 import { PhoneIcon } from '@heroicons/react/solid'
 import { useState } from 'react'
+// import Link from 'next/link'
 
 const Contact = () => {
   const [name, setName] = useState('')
@@ -62,7 +63,9 @@ const Contact = () => {
                         <div className="w-full 2xl:w-1/2 flex justify-end">
                             <button type='button'
                                 className='px-10 py-2 tracking-widest bg-secondary text-black rounded-md'>
-                                Send
+                                {/* <a href={`mailto:fananiapps@gmail.com?subject=Me, ${name}, Mail from ${email}&body=${message}`} target="_blank" rel="noreferrer"> */}
+                                    Send
+                                {/* </a> */}
                             </button>
                         </div>
                     </div>
