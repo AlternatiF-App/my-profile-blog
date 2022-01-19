@@ -11,7 +11,7 @@ const ItemPortofolio = ({ image, year }:ItemPortofolioProps) => {
                 alt="image" loading="lazy"
             />
             <div className="absolute top-0 right-0 left-0 bg-third group-hover:bg-opacity-70 bg-opacity-0 w-full h-full flex justify-center transition-all duration-300 ease-in-out">
-                <div className="pt-24">
+                <div className="lg:pt-12 xl:pt-16 2xl:pt-24">
                     <span className="px-2 py-1 text-4xl font-bold rounded-md text-secondary group-hover:opacity-100 opacity-0 tracking-wide transition-all duration-300 ease-in-out">
                         {year}
                     </span>
