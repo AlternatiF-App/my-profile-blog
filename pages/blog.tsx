@@ -111,9 +111,9 @@ const blog = () => {
                                             className="cursor-pointer font-light text-sm tracking-widest hover:bg-secondary hover:text-black text-white flex justify-between items-center px-4 py-1">
                                             Newest {sort === 'newest' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
                                         </li>
-                                        <li onClick={() => onSort('longest')}
+                                        <li onClick={() => onSort('oldest')}
                                             className="cursor-pointer font-light text-sm tracking-widest hover:bg-secondary hover:text-black text-white flex justify-between items-center px-4 py-1">
-                                            Longest {sort === 'longest' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
+                                            Oldest {sort === 'oldest' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
                                         </li>
                                     </ul>
                                 </div>
@@ -163,7 +163,7 @@ const blog = () => {
                               if (sort === 'newest') {
                                 return b.pubDate.substring(0, 4) - a.pubDate.substring(0, 4)
                               }
-                              if (sort === 'longest') {
+                              if (sort === 'oldest') {
                                 return a.pubDate.substring(0, 4) - b.pubDate.substring(0, 4)
                               }
                               if (sort === 'a - z') {
@@ -196,7 +196,7 @@ const blog = () => {
                                 if (sort === 'newest') {
                                   return b.pubDate.substring(0, 4) - a.pubDate.substring(0, 4)
                                 }
-                                if (sort === 'longest') {
+                                if (sort === 'oldest') {
                                   return a.pubDate.substring(0, 4) - b.pubDate.substring(0, 4)
                                 }
                                 if (sort === 'a - z') {
@@ -270,9 +270,9 @@ const blog = () => {
                                   className="cursor-pointer font-light text-sm tracking-widest hover:bg-secondary hover:text-black text-white flex justify-between items-center px-4 py-2">
                                   Newest {sort === 'newest' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
                               </li>
-                              <li onClick={() => onSort('longest')}
+                              <li onClick={() => onSort('oldest')}
                                   className="cursor-pointer font-light text-sm tracking-widest hover:bg-secondary hover:text-black text-white flex justify-between items-center px-4 py-2">
-                                  Longest {sort === 'longest' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
+                                  Oldest {sort === 'oldest' && <CheckIcon className="h-5 w-5 ml-2" fill="none" stroke="currentColor"/>}
                               </li>
                           </ul>
                       </div>
