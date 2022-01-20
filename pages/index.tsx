@@ -13,7 +13,8 @@ const Home = () => {
     <>
         <Head>
           <title>Fanani Blog - My Workspace in Here</title>
-          <meta name="description" content="This is the place where I create my work and the place where I write whatever I learn to become a frontend developer."/>
+          <meta name="google-site-verification" content="Tt680tcDsEp74CXBfyGG8lCQtoTQO3hbjLSWhn1FrfI" />
+          {/* <meta name="description" content="This is the place where I create my work and the place where I write whatever I learn to become a frontend developer."/> */}
           <meta property="og:title" content='Fanani Blog - Lets make something new, different great together'/>
           <meta property="og:description" content='This is the place where I create my work and the place where I write whatever I learn to become a frontend developer.'/>
           <meta property="og:url" content='https://fanani.id/'/>
