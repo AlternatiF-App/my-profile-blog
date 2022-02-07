@@ -10,30 +10,31 @@ const Header = () => {
   const active:string = 'border-r-4 border-secondary'
 
   return (
-        <div className="font-oxygen px-4 py-4 lg:px-8 xl:px-10 2xl:px-14 lg:py-5 bg-primary flex justify-between items-center">
-            <div>
-                <Link href="/">
-                    <img className="h-6 lg:h-8 2xl:h-10 w-auto cursor-pointer"
-                        src="/assets/images/logo.png"
-                        alt="logo" loading="lazy"
-                    />
-                </Link>
+        <>
+            <div className="font-oxygen px-4 py-4 lg:px-8 xl:px-10 2xl:px-14 lg:py-5 bg-primary flex justify-between items-center">
+                <div>
+                    <Link href="/">
+                        <img className="h-6 lg:h-8 2xl:h-10 w-auto cursor-pointer"
+                            src="/assets/images/logo.png"
+                            alt="logo" loading="lazy"
+                        />
+                    </Link>
+                </div>
+                <ul className="hidden lg:flex space-x-8 lg:text-base 2xl:text-lg font-medium">
+                    <Link href="/"><li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">Home</li></Link>
+                    <Link href="/about"><li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">About</li></Link>
+                    <Link href="/portofolio"><li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">Portofolio</li></Link>
+                    <Link href="/blog"><li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">Blog</li></Link>
+                </ul>
+                <MenuIcon
+                    onClick={() => setMenu(!menu)}
+                    className="block lg:hidden h-6 w-6 text-white"
+                    fill="none" stroke="currentColor"
+                />
             </div>
-            <ul className="hidden lg:flex space-x-8 lg:text-base 2xl:text-lg font-medium">
-                <Link href="/"><li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">Home</li></Link>
-                <Link href="/about"><li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">About</li></Link>
-                <Link href="/portofolio"><li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">Portofolio</li></Link>
-                <Link href="/blog"><li className="text-white hover:text-secondary cursor-pointer transition-all duration-300 ease-in-out">Blog</li></Link>
-            </ul>
-            <MenuIcon
-                onClick={() => setMenu(!menu)}
-                className="block lg:hidden h-6 w-6 text-white"
-                fill="none" stroke="currentColor"
-            />
-            {
-                menu && <div className="block lg:hidden relative z-50 transition duration-300 ease-in-out">
-                <div onClick={() => setMenu(!menu)} className="fixed inset-0 bg-black opacity-25 transition duration-300 ease-in"/>
-                   <nav className="fixed top-0 left-0 bottom-0 w-5/6 max-w-sm py-8 bg-primary text-white shadow-md overflow-y-auto ">
+            <div className="block lg:hidden relative z-50 transition duration-300 ease-in-out">
+                    <div onClick={() => setMenu(!menu)} className={`${menu ? 'opacity-40' : 'opacity-0 invisible'} fixed inset-0 bg-black transition-all duration-300 ease-in-out"`}/>
+                    <nav className={`${menu ? 'translate-x-0' : '-translate-x-full'} fixed inset-y-0 left-0 w-5/6 max-w-sm bg-primary text-white shadow-md overflow-y-auto transition duration-300 ease-in-out`}>
                         <div className="px-4">
                             <Link href="/">
                                 <img className="h-8 w-auto"
@@ -57,8 +58,7 @@ const Header = () => {
                         </div>
                     </nav>
                 </div>
-            }
-        </div>
+        </>
   )
 }
 
