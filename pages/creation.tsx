@@ -1,4 +1,4 @@
-import { SearchIcon, ClockIcon, CloudDownloadIcon, ShareIcon, EyeOffIcon, PhotographIcon, MoonIcon, PlayIcon } from '@heroicons/react/outline'
+import { MagnifyingGlassIcon, ClockIcon, CloudArrowDownIcon, ShareIcon, EyeSlashIcon, CameraIcon, MoonIcon, PlayIcon } from '@heroicons/react/24/outline'
 import AudioPlayer from 'react-h5-audio-player'
 import 'react-h5-audio-player/lib/styles.css'
 import { useState } from 'react'
@@ -29,7 +29,7 @@ const creation = () => {
                     className="w-full px-2 py-2.5 outline-none"
                 />
                 <div className="flex items-center px-3 py-3 rounded-r-full bg-creation1">
-                    <SearchIcon className="w-5 h-5 text-white" fill="none" stroke="currentColor"/>
+                    <MagnifyingGlassIcon className="w-5 h-5 text-white" fill="none" stroke="currentColor"/>
                 </div>
             </div>
             <div className="my-4 px-6 py-6 shadow-md border border-gray-100 border-opacity-50 bg-white rounded-3xl">
@@ -74,7 +74,7 @@ const creation = () => {
                     </li>
                     <li className="flex items-center space-x-4 px-3 py-2 bg-gray-100 rounded-full">
                         <div className="p-1 rounded-full">
-                            <CloudDownloadIcon className="h-5 w-5 text-gray-500" fill="none" stroke="currentColor"/>
+                            <CloudArrowDownIcon className="h-5 w-5 text-gray-500" fill="none" stroke="currentColor"/>
                         </div>
                         <span className="block font-medium">Manage downloads</span>
                     </li>
@@ -86,13 +86,13 @@ const creation = () => {
                     </li>
                     <li className="flex items-center space-x-4 px-3 py-2 bg-gray-100 rounded-full">
                         <div className="p-1 rounded-full">
-                            <EyeOffIcon className="h-5 w-5 text-gray-500" fill="none" stroke="currentColor"/>
+                            <EyeSlashIcon className="h-5 w-5 text-gray-500" fill="none" stroke="currentColor"/>
                         </div>
                         <span className="block font-medium">Incognito mode</span>
                     </li>
                     <li className="flex items-center space-x-4 px-3 py-2 bg-gray-100 rounded-full">
                         <div className="bg-creation1 p-1 rounded-full">
-                            <PhotographIcon className="h-5 w-5 text-white" fill="none" stroke="currentColor"/>
+                            <CameraIcon className="h-5 w-5 text-white" fill="none" stroke="currentColor"/>
                         </div>
                         <span className="block font-medium">Picture Tab</span>
                     </li>
