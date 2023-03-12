@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { UserIcon, CalendarIcon } from '@heroicons/react/outline'
+import { UserIcon, CalendarIcon } from '@heroicons/react/24/outline'
 import moment from 'moment'
 
 interface ItemBlogProps{
@@ -18,7 +18,7 @@ interface ItemBlogProps{
 const ItemBlog = ({ link, width, thumbnail, category, title, years, avatar, name, date }:ItemBlogProps) => {
   return (
         <Link href={`detail/${title}`}>
-        <div className={`${width === 'blog' ? 'w-full' : 'w-64 lg:w-96'} cursor-pointer custom-shadow relative bg-third text-white border-b-2 border-transparent hover:border-secondary transition-all duration-300 ease-in-out`}>
+        <div className={`${width === 'blog' ? 'w-full' : 'w-64 lg:w-96'} cursor-pointer custom-shadow relative bg-primary text-white shadow-card transition-all duration-300 ease-in-out`}>
             <div>
                 <img className="w-full h-52 lg:h-36 xl:h-44 2xl:h-64 object-cover"
                     src={thumbnail}
@@ -27,10 +27,10 @@ const ItemBlog = ({ link, width, thumbnail, category, title, years, avatar, name
             </div>
             <div className={`${width === 'blog' ? 'w-full' : 'w-64 lg:w-96'} px-4 py-4 lg:px-6 lg:py-6`}>
                 <div className="flex justify-between space-x-4 items-center lg:h-6">
-                    <span className="block text-sm 2xl:text-xl font-light text-secondary capitalize">{category}</span>
+                    <span className="block text-sm 2xl:text-xl font-light text-white truncate capitalize ">{category}</span>
                     <span className="block text-xs 2xl:text-sm font-light">{moment(years).format('YYYY')}</span>
                 </div>
-                <h1 className="text-base 2xl:text-2xl truncate pt-4">
+                <h1 className="text-base 2xl:text-2xl truncate pt-2">
                     {title}
                 </h1>
                 <div className='pt-8 flex space-x-4 items-center'>

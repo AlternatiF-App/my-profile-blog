@@ -37,10 +37,10 @@ const detail = () => {
   return (
         <>
             <Header/>
-                <div className="bg-primary font-oxygen">
-                    <div className="w-full 2xl:w-10/12 2xl:mx-auto px-4 py-8 lg:px-10 lg:py-16 text-white">
+                <div className="bg-white font-inter">
+                    <div className="w-full 2xl:w-10/12 2xl:mx-auto px-4 py-8 lg:px-10 lg:py-16 mt-16 text-black">
                         <h1 className="text-2xl lg:text-4xl 2xl:text-6xl font-medium tracking-wider">{data.title}</h1>
-                        <div className="w-20 h-1 bg-secondary"/>
+                        <div className="w-20 h-1 bg-primary"/>
                         <div className="py-10 flex space-x-6 items-center">
                             <img className="w-14 h-14 lg:w-20 lg:h-20 object-cover rounded-full"
                                 src={profile.image}
@@ -52,7 +52,7 @@ const detail = () => {
                             </div>
                         </div>
                         <div className="w-full">
-                            <div className="pt-4 px-0 2xl:px-8 font-oxygen content relative"
+                            <div className="pt-4 px-0 2xl:px-8 font-inter content relative"
                                 dangerouslySetInnerHTML={{ __html: data.content }}>
                             </div>
                         </div>

@@ -41,9 +41,9 @@ module.exports = {
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
-      primary: '#1f2233',
-      secondary: '#ffcf86',
-      third: '#2c2e4a',
+      primary: '#3F72AF',
+      secondary: '#F9F7F7',
+      third: '#DBE2EF',
       creation1: '#18aba2'
     }),
     columns: {
@@ -216,6 +216,7 @@ module.exports = {
       xl: '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)',
       '2xl': '0 25px 50px -12px rgb(0 0 0 / 0.25)',
       inner: 'inset 0 2px 4px 0 rgb(0 0 0 / 0.05)',
+      card: '0px 0px 10px rgb(229 229 229)',
       none: 'none'
     },
     boxShadowColor: ({ theme }) => theme('colors'),
@@ -380,7 +381,8 @@ module.exports = {
       oxygen: [
         'Oxygen',
         'sans-serif'
-      ]
+      ],
+      inter: ['Inter', 'sans-serif']
     },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],

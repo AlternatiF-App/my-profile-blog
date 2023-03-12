@@ -2,7 +2,7 @@
 import Footer from '../components/Footer/Footer'
 import Header from '../components/Header/Header'
 import ItemBlog from '../components/LandingPage/Items/ItemBlog'
-import { ChevronDownIcon, CheckIcon } from '@heroicons/react/outline'
+import { ChevronDownIcon, CheckIcon } from '@heroicons/react/24/outline'
 import { useState, useEffect, useCallback } from 'react'
 import { BottomSheet } from 'react-spring-bottom-sheet'
 import 'react-spring-bottom-sheet/dist/style.css'
@@ -54,10 +54,10 @@ const blog = () => {
   return (
         <>
             <Header/>
-            <div className="bg-primary font-oxygen hide-scroll-bar">
-                <div className="w-full 2xl:w-11/12 2xl:mx-auto px-4 py-6 lg:px-8 lg:py-12">
-                    <h1 className="text-xl lg:text-3xl font-medium tracking-wider text-white">Blog</h1>
-                    <div className="h-1 w-8 bg-secondary rounded-full"/>
+            <div className="bg-white font-inter hide-scroll-bar">
+                <div className="w-full 2xl:w-11/12 2xl:mx-auto px-4 py-6 lg:px-8 lg:py-12 mt-16">
+                    <h1 className="text-xl lg:text-3xl font-medium tracking-wider text-primary">Blog</h1>
+                    <div className="h-1 w-8 bg-primary rounded-full"/>
                     <div className="pt-10 flex space-x-4 justify-between lg:justify-end">
                         <div className="w-44 relative">
                             <button onClick={() => {
