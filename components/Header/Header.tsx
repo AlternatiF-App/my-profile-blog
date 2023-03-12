@@ -27,7 +27,7 @@ const Header = () => {
 
   return (
         <>
-            <div className={`${scrollY > 0 ? 'bg-white' : 'bg-primary'} fixed inset-x-0 top-0 z-10 transition-all duration-300 ease-in-out shadow-card`}>
+            <div className={`${scrollY > 0 ? 'bg-white shadow-card' : 'bg-primary'} fixed inset-x-0 top-0 z-10 transition-all duration-300 ease-in-out`}>
               <div className="container mx-auto font-inter px-4 py-4 lg:px-8 lg:py-5 flex justify-between items-center">
                   <div className={scrollY > 0 ? 'text-primary' : 'text-secondary'}>
                     <Link href="/">
