@@ -12,7 +12,7 @@ const Navbar = (props: NavbarProps) => {
   const { handleScroll } = props
 
   return (
-    <header className='lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24'>
+    <header className='lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between py-8 lg:py-24'>
       <div className='space-y-2'>
         <h1 className='text-5xl font-bold text-primary'>Ahmad Fanani</h1>
         <span className='block text-lg'>Frontend Developer at Gramedia</span>
@@ -23,7 +23,7 @@ const Navbar = (props: NavbarProps) => {
         <CardMenu handleScroll={handleScroll} title='experience' />
         <CardMenu handleScroll={handleScroll} title='project' />
       </div>
-      <div className='mt-auto flex space-x-4 items-center'>
+      <div className='mt-10 lg:mt-auto flex space-x-4 items-center'>
         <Image src={github} alt='Github' 
           className='cursor-pointer'
           height={24} width={24}

@@ -6,6 +6,7 @@ interface CardExperienceProps {
   name: string
   description: string
   tech?: String[]
+  url: string
 }
 
 const CardProject = (props: CardExperienceProps) => {
@@ -13,11 +14,12 @@ const CardProject = (props: CardExperienceProps) => {
     image,
     name,
     description,
-    tech
+    tech,
+    url
   } = props
 
   return (
-    <div className='flex space-x-4 p-4 rounded-md bg-gray-50 hover:bg-gray-100 group cursor-pointer'>
+    <div onClick={() => window.open(url)} className='flex space-x-4 p-4 rounded-md bg-gray-50 hover:bg-gray-100 group cursor-pointer'>
       <div className='w-1/4 text-sm text-gray-400'>
         <img src={image} alt='Project Image' height={48} width={100} />
       </div>
