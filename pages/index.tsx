@@ -78,6 +78,13 @@ const Home = () => {
               description='ERP Program for PT. CDS Asia Electronics'
               tech={['React.js', 'Next.js', 'JavaScript', 'TypeScript', 'HTML', 'Tailwind CSS']}
             />
+            <CardProject
+              image='https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/EBay_logo.svg/1200px-EBay_logo.svg.png'
+              name='eBay Clone'
+              url='https://ebay-clone-alpha.vercel.app/'
+              description='Cloning e-commerce eBay'
+              tech={['React.js', 'Next.js', 'JavaScript', 'TypeScript', 'Stripe', 'Supabase', 'Prisma', 'HTML', 'Tailwind CSS']}
+            />
             {/* <button className='flex items-center group text-primary my-4'>
               View Full Project Archive
               <ArrowRightIcon className='h-4 w-4 ml-2 group-hover:translate-x-2 transition-all duration-300 ease-in-out' fill='none' stroke='currentColor' />
