@@ -31,11 +31,11 @@ const CardProject = (props: CardExperienceProps) => {
         <div className='text-sm mt-4'>
           { description }
         </div>
-        <div className='mt-4 text-sm flex flex-wrap gap-2'>
+        <div className='mt-4 flex flex-wrap gap-2'>
           {
             tech?.map((item: any, index: number) => {
               return (
-                <span key={index} className='bg-third text-primary px-2 py-1 rounded-full'>
+                <span key={index} className='bg-third text-primary px-2 py-1 text-xs rounded-full'>
                   { item }
                 </span>
               )

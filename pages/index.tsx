@@ -82,8 +82,15 @@ const Home = () => {
               image='https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/EBay_logo.svg/1200px-EBay_logo.svg.png'
               name='eBay Clone'
               url='https://ebay-clone-alpha.vercel.app/'
-              description='Cloning e-commerce eBay'
+              description='Cloning e-commerce eBay. In here you can login using your Google account and then select product you want to buy. The payment gateway using stripe, you can input the card number like this (4242-4242-4242-4242) and the other is up to you.'
               tech={['React.js', 'Next.js', 'JavaScript', 'TypeScript', 'Stripe', 'Supabase', 'Prisma', 'HTML', 'Tailwind CSS']}
+            />
+            <CardProject
+              image='https://freelogopng.com/images/all_img/1688663226threads-logo-png.png'
+              name='Threads Clone'
+              url='https://threads-clone-pi-ten.vercel.app/'
+              description='Cloning social media Threads. You can post threads, comment and make your own organization in here. You can also check the other profile of user.'
+              tech={['React.js', 'Next.js', 'JavaScript', 'TypeScript', 'MongoDB', 'Clerk', 'Webhook', 'HTML', 'Tailwind CSS']}
             />
             {/* <button className='flex items-center group text-primary my-4'>
               View Full Project Archive
