@@ -21,6 +21,8 @@ const Home = () => {
 
   return (
     <div className='font-inter mx-auto px-6 lg:px-24 min-h-screen max-w-screen-xl'>
+      <title>Ahmad Fanani</title>
+      <meta name="description" content="My Portofolio Page"/>
       <div className='lg:flex lg:justify-between lg:gap-4'>
         <Navbar handleScroll={handleScroll} />
         <main id='content' className='pt-24 lg:w-1/2 lg:py-24'>
